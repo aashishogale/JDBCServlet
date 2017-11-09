@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create your Google Account</title>
+<script type="text/javascript" src="jquery-3.2.1.js">
+</script>
+<script type="text/javascript">
+	
+$(document).ready (function(){
+	$("#submit").click(function() {
+		if($("#fname").val()=="") {
+			alert("please enter first name");
+			return false;
+		}
+		if($("#lname").val()=="") {
+			alert("please enter last name");
+			return false;
+		}
+		if($("#email").val()=="") {
+			alert("please enter email");
+			return false;
+		}
+		if($("#pass").val()=="") {
+			alert("please enter password");
+			return false;
+		}
+		if($("#rpass").val()=="") {
+			alert("please enter password");
+			return false;
+		}
+		if($("#location").val()=="") {
+			alert("please enter correct location");
+			return false;
+		}
+		return true;
+	});
+
+	
+			
+		
+	});
+</script>
+<style>
+input[type="button"] {
+	margin-left: 93%;
+	margin-top: 1.0%;
+	background-color: DodgerBlue;
+	height: 30px;
+	width: 70px;
+	border-radius: 5px;
+	color: white;
+}
+
+img.google {
+	position: absolute;
+	height: 40px;
+	width: 120px;
+	margin-top: 1.0%;
+	margin-left: 2.5%;
+}
+
+div.box {
+	position: absolute;
+	margin-top: 2.0%;
+	width: 100%;
+	height: 900px;
+	background-color: white;
+	box-shadow: 1px 1px 5px #888888;
+}
+
+p.title {
+	text-align: center;
+	color: #59595b;
+	font-size: 200%;
+}
+
+div.container {
+	position: absolute;
+	margin-left: 60%;
+	width: 100px;
+	height: 700px;
+	background-color: #e3e5e8;
+	box-shadow: 1px 1px 0px #888888;
+	width: 450px;
+}
+
+input[type="text"] {
+	margin-left: 3%;
+	display: inline-block;
+	width: 40%;
+}
+
+input[type="email"] {
+	margin-left: 3%;
+	width: 80%;
+}
+
+p.heading {
+	margin-left: 3%;
+	font-size: 80%;
+}
+
+span.atgmail {
+	margin-top: 5px;
+	position: absolute;
+	right: 70px;
+	color: #999;
+	direction: ltr;
+	position: absolute;
+}
+
+input[type=date] {
+	margin-left: 3%;
+	width: 40px;
+}
+
+input[type=text].year {
+	width: 40px;
+}
+
+div.space {
+	margin-left: 3%;
+}
+
+input[type=button].button {
+	margin-left: 80%;
+	width: 80px;
+	height: 30px;
+}
+</style>
+</head>
+
+<body background="backgroundimage.jpg">
+
+	<img src="googlelogo.jpg" alt="google" class="google">
+	<input type="button" value="Sign in">
+	<div class="box">
+		<p class="title">Create your Google Account
+		<p>
+		<form>
+			<div class="container">
+				<div class="name">
+					<p class="heading">Name</p>
+					<input type="text" placeholder="First" id="fname"> <input
+						type="text" placeholder="Last" id="lname">
+						<p id="pname"></p>
+				</div>
+				<div class="email">
+					<p class="heading">Choose your username</p>
+					<input type="text" id="email">
+				</div>
+				<div>
+					<p class="heading">Create a password</p>
+					<input type="text" id="pass">
+				</div>
+				<div>
+					<p class="heading">Confirm your password</p>
+					<input type="text" id="rpass">
+				</div>
+				<div>
+					<p class="heading">Birthday</p>
+					<input type="date"  id="date">
+
+				</div>
+				<p class="heading">Gender</p>
+				<div class="space">
+					<select name="gender">
+						<option value="gender"></option>
+						<option value="Female">Female</option>
+						<option value="Male">Male</option>
+						<option value="Others">Others</option>
+					</select>
+				</div>
+				<div>
+					<p class="heading">Mobile Phone</p>
+					<input type="text" id="mobile">
+				</div>
+				<div>
+					<p class="heading">Your current email address</p>
+					<input type="text">
+				</div>
+				<div Class="space">
+					<p class="heading">Location</p>
+					<select name="location" id="location">
+						<option value=""></option>
+						<option value="India">India</option>
+						<option value="China">China</option>
+						<option value="Australia">Australia</option>
+						<option value="USA">USA</option>
+						<option value="Germany">Germany</option>
+						<option value="Hong-Kong">Hong-Kong</option>
+						<option value="Uk">UK</option>
+					</select>
+				</div>
+				<div>
+					<input type="submit" value="Enter" class="button" id= "submit">
+				</div>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

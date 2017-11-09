@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" action="MailServlet" style="border: 1px solid #ccc">
+		<div class="container">
+			<label><b>Email</b></label>
+			 <input type="text"
+				placeholder="Enter  your email" name="emailFrom" required> 
+					 <input type="password"
+				placeholder="Enter password" name="password" required> 
+				 <input type="text"
+				placeholder="Enter recepient email" name="emailTo" required> 
+				
+				
+				<label><b>Enter message here</b></label>
+				<textarea rows="4" cols="50" name="frommessage"></textarea>
+				<input type="submit" id="button"
+				value="Next" class="button" style="float: right" />
+		</div>
+
+	</form>
+</body>
+</html>
