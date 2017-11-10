@@ -12,7 +12,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.SessionCookieConfig;
 import javax.servlet.http.HttpSession;
 
-import com.bridgelabz.servlet.UserData;
+import com.bridegelabz.dao.UserDao;
 
 /**
  * Servlet Filter implementation class LoginFilter
@@ -39,7 +39,7 @@ public class LoginFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		UserData userdata = new UserData();
+		UserDao userdata = new UserDao();
 
 		response.setContentType("text/html");
 		

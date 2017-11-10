@@ -10,13 +10,21 @@
 	<script type="text/javascript">
 	
 	$(document).ready(function() {
-        $("#button1").click(function(event) {
+        $("#email").bind("change paste keyup",function(event) {
                 var name = $("#email").val();
                 $.ajax({
                 		url:'AjaxServlet',method:"Get", async:false,data:{
                       email1 : name
                 }, success:function(response) {
                         $('#email2').text(response);
+                       var button= $("#button1");
+                       button.prop("disabled",true)
+                       
+                }
+                ,error:function(response){
+                	 $('#email2').hide();
+                	 var button= $("#button1");
+                     button.prop("disabled",false)
                 }});
         });
 });
@@ -118,7 +126,7 @@ input[type="text"] {
 
 		<div id="form1">
 
-
+<form action="LoginServlet"><
 
 			<img src="index.png" height=55 width=90 />
 			<h2 class="text1">
@@ -137,8 +145,9 @@ input[type="text"] {
 				<a href="Login.html"> <b>More options</b>
 				</a>
 			</p>
-			<input type="button" id="button1"
+			<input type="submit" id="button1"
 				value="Next" class="button" style="float: right" />
+		</form>
 		</div>
 	</div>
 

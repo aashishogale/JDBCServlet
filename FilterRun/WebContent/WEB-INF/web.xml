@@ -15,7 +15,7 @@
 
   <filter>  
 <filter-name>CheckFilter</filter-name>  
-<filter-class>com.bridgelabz.servlet.CheckFilter</filter-class>  
+<filter-class>com.bridgelabz.filter.CheckFilter</filter-class>  
 </filter>  
 <filter-mapping>  
 <filter-name>CheckFilter</filter-name>  

@@ -3,15 +3,15 @@
   <display-name>JDBCServlet</display-name>
   <servlet>
     <servlet-name>register</servlet-name>
-    <servlet-class>com.bridgelabz.servlet.register</servlet-class>
+    <servlet-class>com.bridgelabz.controller.register</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>WelcomeServlet</servlet-name>
-    <servlet-class>com.bridgelabz.servlet.WelcomeServlet</servlet-class>
+    <servlet-class>com.bridgelabz.controller.WelcomeServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>AuthenticateServlet</servlet-name>
-    <servlet-class>com.bridgelabz.servlet.AuthenticateServlet</servlet-class>
+    <servlet-class>com.bridgelabz.controller.AuthenticateServlet</servlet-class>
   </servlet>
   <filter>
     <filter-name>LoginFilter</filter-name>

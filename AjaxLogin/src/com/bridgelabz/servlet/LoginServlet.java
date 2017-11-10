@@ -1,29 +1,23 @@
 package com.bridgelabz.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bridgelabz.dao.EmpData1;
-
 /**
- * Servlet implementation class InfoServlet
+ * Servlet implementation class LoginServlet
  */
-
-public class InfoServlet extends HttpServlet {
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InfoServlet() {
+    public LoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,30 +26,27 @@ public class InfoServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		UserData userdata = new UserData();
+
 		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
 		
-		String name=request.getParameter("Name");
-		EmpData1 edata=new EmpData1();
-		ResultSet rset=edata.getinfo(name);
-		PrintWriter printWriter=response.getWriter();
-		try {
-			while(rset.next()){
-			printWriter.println("<html>");
-			printWriter.println("<h1>"+rset.getString(2)+"</h1>");
-			printWriter.println("<h1>"+rset.getString(3)+"</h1>");
-			printWriter.println("<h1>"+rset.getString(4)+"</h1>");
-			printWriter.println("</html>");
+		String email= request.getParameter("email");
+	
+	System.out.println(email);
+
+		if (userdata.selectid(email)!=0) {
+			response.sendRedirect("https://www.google.co.in/");
 			
-				
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		} 
+
+			 response.getWriter().write("pls enter correct message"); 
+		
+	
 	}
+		
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
