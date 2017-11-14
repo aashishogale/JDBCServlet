@@ -9,5 +9,9 @@
 </head>
 <body>
 <h1>error</h1>
+
+    <jsp:forward page="Login.jsp"></jsp:forward>
+  
+
 </body>
 </html>

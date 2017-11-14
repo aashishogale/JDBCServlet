@@ -6,13 +6,14 @@ import java.io.PrintWriter;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.SessionCookieConfig;
 import javax.servlet.http.HttpSession;
 
-import com.bridegelabz.dao.UserDao;
+import com.bridgelabz.dao.UserDao;
 
 /**
  * Servlet Filter implementation class LoginFilter
@@ -43,21 +44,22 @@ public class LoginFilter implements Filter {
 
 		response.setContentType("text/html");
 		
-		String email= request.getParameter("email");
-	
-		PrintWriter pWriter = response.getWriter();
 
-		if (userdata.selectid(email)!=0) {
-			
-		
-			// pass the request along the filter chain
+		String email = request.getParameter("email");
+
+		// PrintWriter pWriter = response.getWriter();
+		System.out.println(userdata.selectid(email));
+		if (userdata.selectid(email) != 0) {
 			chain.doFilter(request, response);
-		} else {
+			// pass the request along the filter chain
 
-			pWriter.println("<h1>error pls enter correct message</h1>");
+		} else {
+			RequestDispatcher rdDispatcher = request.getRequestDispatcher("error.jsp");
+			rdDispatcher.forward(request, response);
+
+		
 
 		}
-		chain.doFilter(request, response);
 	}
 
 	/**

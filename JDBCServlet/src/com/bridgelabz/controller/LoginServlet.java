@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.bridegelabz.dao.UserDao;
+import com.bridgelabz.dao.UserDao;
 
 /**
  * Servlet implementation class LoginServlet
@@ -43,8 +43,8 @@ public class LoginServlet extends HttpServlet {
 			PrintWriter printWriter=response.getWriter();
 			response.sendRedirect("https://www.google.co.in/");
 		
-			/*RequestDispatcher rDispatcher1 = request.getRequestDispatcher("/Welcome.html");
-			rDispatcher1.forward(request, response);*/
+			//RequestDispatcher rDispatcher1 = request.getRequestDispatcher("/success.jsp");
+			//rDispatcher1.forward(request, response);
 
 		
 
@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
 		else {
 
 			
-			RequestDispatcher rDispatcher1 = request.getRequestDispatcher("/wrongpage.html");
+			RequestDispatcher rDispatcher1 = request.getRequestDispatcher("/error.jsp");
 			rDispatcher1.forward(request, response);
 
 		}

@@ -19,7 +19,7 @@
   </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
-    <url-pattern>/AuthenticateServlet</url-pattern>
+    <url-pattern>/WelcomeServlet</url-pattern>
   </filter-mapping>
   <servlet-mapping>
     <servlet-name>AuthenticateServlet</servlet-name>

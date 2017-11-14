@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bridegelabz.dao.UserDao;
-import com.bridelabz.model.User;
+import com.bridgelabz.dao.UserDao;
+import com.bridgelabz.model.User;
 
 /**
  * Servlet implementation class register
