@@ -13,13 +13,13 @@ import javax.servlet.http.HttpSession;
  * Servlet implementation class WelcomeServlet
  */
 
-public class WelcomeServlet extends HttpServlet {
+public class EmailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WelcomeServlet() {
+    public EmailServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,8 +32,7 @@ public class WelcomeServlet extends HttpServlet {
 	HttpSession session=request.getSession();
 	//System.out.println("Welcome Servlet"+request.getParameter("email"));
 	session.setAttribute("email", request.getParameter("email"));
-	RequestDispatcher rdispatcher=request.getRequestDispatcher("/password.html");
-	rdispatcher.forward(request, response);
+	response.sendRedirect("password");
 	
 
 	}

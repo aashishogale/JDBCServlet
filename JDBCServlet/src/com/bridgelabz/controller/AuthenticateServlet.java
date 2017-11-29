@@ -38,8 +38,8 @@ public class AuthenticateServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		PrintWriter pWriter = response.getWriter();
-		RequestDispatcher rDispatcher = request.getRequestDispatcher("/LoginServlet");
-		rDispatcher.forward(request, response);
+	    response.sendRedirect("LoginServlet");
+		
 	
 	
 	

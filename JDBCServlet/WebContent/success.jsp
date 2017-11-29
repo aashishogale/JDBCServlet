@@ -13,7 +13,7 @@
 <h1>success</h1>
 
   <%@page import="com.bridgelabz.dao.UserDao,com.bridgelabz.model.User,java.util.*"%>  
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
+ 
 <h1>Users List</h1>  
   
 <%  

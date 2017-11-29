@@ -17,13 +17,13 @@ import com.bridgelabz.model.User;
  * Servlet implementation class register
  */
 
-public class register extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public register() {
+	public RegisterServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,6 +33,14 @@ public class register extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
@@ -52,29 +60,18 @@ public class register extends HttpServlet {
 		int i = userdata.insertStatement();
 		PrintWriter printWriter = response.getWriter();
 		if (i == 1) {
-			RequestDispatcher rDispatcher = getServletContext().getRequestDispatcher("/Login.jsp");
-			rDispatcher.forward(request, response);
+			response.sendRedirect("login");
 
 		} else {
 			printWriter.println("Plz enter correct information");
-			RequestDispatcher rDispatcher = getServletContext().getRequestDispatcher("/register.html");
-			rDispatcher.include(request, response);
+			response.sendRedirect("password");
 
 		}
-		int id = userdata.selectid(name);
+		
 
-		printWriter.println("your name" + name + " is registered at id" + id);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+	
 
 }
