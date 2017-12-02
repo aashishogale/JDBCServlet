@@ -1,20 +1,19 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Create your Google Account</title>
-<script type="text/javascript" src="login.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 
-<link rel="stylesheet" type="text/css" href="register.css">
-
-
+<link rel="stylesheet" type="text/css" href="css/register.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 </head>
-
-<body background="backgroundimage.jpg">
-	<form onsubmit="return checkvalid()" action="RegisterServlet" method="post">
-		<img src="index.png" alt="google" class="google"> 
-		<a href="login"><input
-			type="button" value="Sign in"></a>
+<body>
+	<form onsubmit="return checkvalid()" action="RegisterServlet"
+		method="post">
+		<img src="index.png" alt="google" class="google"> <a
+			href="login"><input type="button" value="Sign in"></a>
 		<div class="box">
 			<p class="title">Create your Google Account
 			<p>
@@ -45,7 +44,7 @@
 				</div>
 				<div>
 					<p class="heading">Birthday</p>
-					<input type="date" placeholder="day" class="day" id="day" >
+					<input type="date" placeholder="day" class="day" id="day">
 					<p id="pday"></p>
 
 				</div>
@@ -86,6 +85,5 @@
 			</div>
 		</div>
 	</form>
-
 </body>
 </html>

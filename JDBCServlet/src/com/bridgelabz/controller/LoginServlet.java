@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 		response.setContentType("text/html");
 		if (userdata.returnmail(email, password)) {
 			PrintWriter printWriter=response.getWriter();
-			response.sendRedirect("https://www.google.co.in/");
+			response.sendRedirect("success");
 		
 			//RequestDispatcher rDispatcher1 = request.getRequestDispatcher("/success.jsp");
 			//rDispatcher1.forward(request, response);

@@ -78,7 +78,7 @@ h2 {
 input[type="text"] {
 	width: 270px;
 	height: 42px;
-	border-radius: 5px 5px 5px 5px;
+	border-radius: 15px 15px 15px 15px;
 	background: transparent;
 	font-size: 18px;
 	margin-top: 50px;

@@ -33,13 +33,7 @@ public class AuthenticateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession(false);
-		session.setAttribute("password", request.getParameter("password"));
-		response.setContentType("text/html");
-
-		PrintWriter pWriter = response.getWriter();
-	    response.sendRedirect("LoginServlet");
-		
+	
 	
 	
 	
@@ -55,7 +49,13 @@ public class AuthenticateServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		// TODO Auto-generated method stub
+		HttpSession session = request.getSession(false);
+		session.setAttribute("password", request.getParameter("password"));
+		response.setContentType("text/html");
+
+		PrintWriter pWriter = response.getWriter();
+	    response.sendRedirect("LoginServlet");
 	}
 
 }
