@@ -27,7 +27,7 @@
 					<b>to continue to gmail</b>
 				</h2>
 				<input type="text" name="email" id="email" />
-				
+				<>
 			
 				<input type="submit" id="button"
 					value="Next" class="button" style="float: right" />

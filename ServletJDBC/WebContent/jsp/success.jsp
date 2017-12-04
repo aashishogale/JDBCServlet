@@ -13,15 +13,11 @@
 <body>
 <h1>success</h1>
 
-  <%@page import="com.bridgelabz.dao.UserDao,com.bridgelabz.model.User,java.util.*"%>  
+    
  
 <h1>Users List</h1>  
   
-<%  
-UserDao userdao=new UserDao();
-List<User> list=userdao.getAllRecords();  
-request.setAttribute("list",list);  
-%>  
+ 
   
 <table border="1" width="90%">  
 <tr><th>Name</th><th>Password</th><th>Email</th>  
@@ -32,5 +28,7 @@ request.setAttribute("list",list);
  </tr>
 </c:forEach>  
 </table>   
+<h1>count</h1>
+<h2>"${count}"</h2>
 </body>
 </html>

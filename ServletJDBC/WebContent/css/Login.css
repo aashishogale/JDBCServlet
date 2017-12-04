@@ -82,8 +82,8 @@ input[type="text"] {
 	background: transparent;
 	font-size: 18px;
 	margin-top: 50px;
-	border-width: 0px;
-	outline: none;
+	border-width: thin;
+	outline-style: none;
 	margin-left: 50px;
 	margin-right: 50px;
 }
