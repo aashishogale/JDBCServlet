@@ -39,7 +39,9 @@ public class LoginServlet extends HttpServlet {
 		String email=(String)session.getAttribute("email");
 		String password=(String)session.getAttribute("password");
 		response.setContentType("text/html");
+	
 		if (userdata.returnmail(email, password)) {
+		
 			
 			response.sendRedirect("presuccess");
 		

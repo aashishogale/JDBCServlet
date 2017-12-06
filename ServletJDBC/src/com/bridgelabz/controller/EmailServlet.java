@@ -34,10 +34,11 @@ public class EmailServlet extends HttpServlet {
 	HttpSession session=request.getSession(true);
 	int number=LoginListener.getActiveSessions();
 	//int number=(Integer) session.getAttribute("count");
-	
+	System.out.print("number"+number);
 	request.setAttribute("count",number); 
 	//System.out.println("Welcome Servlet"+request.getParameter("email"));
 	session.setAttribute("email", request.getParameter("email"));
+
 	response.sendRedirect("password");
 	
 	

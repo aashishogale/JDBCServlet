@@ -18,7 +18,7 @@
 <h1>Users List</h1>  
   
  
-  
+ <%	session.invalidate(); %>
 <table border="1" width="90%">  
 <tr><th>Name</th><th>Password</th><th>Email</th>  
  

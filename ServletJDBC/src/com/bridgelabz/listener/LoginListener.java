@@ -16,7 +16,7 @@ public class LoginListener implements HttpSessionListener {
      * Default constructor. 
      */
 	ServletContext sContext = null;
-	private static int count=0;
+	private static int count;
 	public static int getActiveSessions() {
 		return count;
 	}
@@ -39,6 +39,7 @@ public class LoginListener implements HttpSessionListener {
      * @see HttpSessionListener#sessionDestroyed(HttpSessionEvent)
      */
     public void sessionDestroyed(HttpSessionEvent se)  { 
+   
          // TODO Auto-generated method stub
     }
 	
